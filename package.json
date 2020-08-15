@@ -1,0 +1,11 @@
+{
+  "name": "bodystats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server -f -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
