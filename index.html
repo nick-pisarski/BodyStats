@@ -24,25 +24,138 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <div class="nav-link" id="bfc-nav-btn">Body Fat Calculator</div>
+                        <div class="nav-link active" id="bfc-nav-btn">Body Fat Calculator</div>
                     </li>
                     <li class="nav-item">
-                        <div class="nav-link active" id="bmr-nav-btn">BMR Calculator</div>
+                        <div class="nav-link" id="bmr-nav-btn">BMR Calculator</div>
                     </li>
                 </ul>
             </div>
         </nav>
 
+        <div class="container-sm content" id="bfc-container">
+            <h3 class="container-title">Body Fat Calculator</h3>
+            <p class="description">Using Skin calipers at various locations to determine a persons body fat percentage.
+            </p>
+            <hr>
+            <form>
 
-        <div class="container-sm content" id="bfc-container" style="display: none;">
-            <span>Body Fat Calculator</span>
+                <div class="form-group row">
+                    <label for="bfcWeightInput" class="col-4 col-form-label">Weight</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfcWeightInput">
+                        <div class="input-group-append">
+                            <span class="input-group-text" id="bfc-weight-lbl">lbs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Front</h5>
+
+                <div class="form-group row">
+                    <label for="bfc-pec" class="col-4 col-form-label">Pectoral</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-pec">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-abs" class="col-4 col-form-label">Abdominals</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-abs">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-bicep" class="col-4 col-form-label">Bicep</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-bicep">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-suprailiac" class="col-4 col-form-label">Suprailiac</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-suprailiac">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-quad" class="col-4 col-form-label">Quadricep</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-quad">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>Back</h5>
+
+                <div class="form-group row">
+                    <label for="bfc-tricep" class="col-4 col-form-label">Tricep</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-tricep">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-subscapular" class="col-4 col-form-label">Subscapular</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-subscapular">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-kidney" class="col-4 col-form-label">Kidney</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-kidney">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="bfc-calf" class="col-4 col-form-label">Medial Calf</label>
+                    <div class="input-group col-8">
+                        <input type="number" class="form-control" id="bfc-calf">
+                        <div class="input-group-append">
+                            <span class="input-group-text">mm</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <div class="col">
+                        <button class="btn btn-primary" id="bfc-calculate">Calculate</button>
+                    </div>
+                </div>
+            </form>
         </div>
 
-        <div class="container-sm content" id="bmr-container">
-            <!-- Title -->
+        <div class="container-sm content" id="bmr-container" style="display: none;">
+
             <h3 class="container-title">Basal Metabolic Rate Calculator</h3>
 
-            <!-- Short Description -->
             <p class="description"> Basal Metabolic Rate is the number of calories required to keep your body
                 functioning at rest. BMR is
                 also known as your body’s metabolism; therefore, any increase to your metabolic weight, such as
@@ -53,7 +166,7 @@
             <hr>
             <form id="bmr-form-data">
                 <!-- Units -->
-                <div class="row">
+                <!-- <div class="row">
                     <fieldset class="col col-sm-6 form-group">
 
                         <div class="row">
@@ -77,7 +190,6 @@
 
                         </div>
                     </fieldset>
-                    <!-- Height Units -->
                     <fieldset class="col col-sm-6 form-group">
                         <div class="row">
                             <legend class="col-form-label col pt-0">Height Unit</legend>
@@ -98,8 +210,7 @@
                             </div>
                         </div>
                     </fieldset>
-                </div>
-
+                </div> -->
 
                 <!-- Sex and Age -->
                 <div class="row">
@@ -176,10 +287,6 @@
                     </div>
                 </div>
             </form>
-
-            <!-- Results -->
-
-
         </div>
 
     </div>
