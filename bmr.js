@@ -23,16 +23,19 @@ function getBMRFormData() {
 
 $('#bmr-calculate').click((evt) => {
     evt.preventDefault();
+
+    $('#bmr-results').html();
+
     const formData = getBMRFormData();
     // Calculate BMR
     const weight = formData.weightUnit == 'pounds' ? poundsToKilograms(formData.weight) : formData.weight;
     const height = formData.heightUnit == 'inches' ? inchesToCentimeters(formData.height) : formData.height;
-    const isFemale = formData.sex == 'femail';
+    const isFemale = formData.sex == 'female';
 
     const bmr = calculateBMR(weight, height, formData.age, isFemale);
     ///Display Results
+    $('#bmr-results').html(`${Math.round(bmr)} calories`);
 
-    console.log(bmr);
 })
 
 //#region Radio Click events
