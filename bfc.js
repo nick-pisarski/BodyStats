@@ -37,5 +37,4 @@ $('#bfc-calculate').click((evt) => {
     $('#bfc-flb>span').html(round2(fatlbs));
     $('#bfc-lbm>span').html(round2(lm));
 
-    console.log(sum, bfr, bfp, fatlbs, lm);
 })
