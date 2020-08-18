@@ -28,8 +28,8 @@ $('#bmr-calculate').click((evt) => {
 
     const formData = getBMRFormData();
     // Calculate BMR
-    const weight = formData.weightUnit == 'pounds' ? poundsToKilograms(formData.weight) : formData.weight;
-    const height = formData.heightUnit == 'inches' ? inchesToCentimeters(formData.height) : formData.height;
+    const weight = poundsToKilograms(formData.weight);
+    const height = inchesToCentimeters(formData.height);
     const isFemale = formData.sex == 'female';
 
     const bmr = calculateBMR(weight, height, formData.age, isFemale);
